@@ -3,9 +3,9 @@ date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 ulang:
 // function change(){
-echo "\e[96m<=============🅷 🅸 🅻 🅼 🅰 🆆 🅰 🅽 🆃 🆄 🅱 🅴=========> \n";
+echo "\e[96m<=============SEKTOR VI =========> \n";
 echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
-echo "\e[96m         SCRIFT GOJEK 17 JULI 2020       \n";
+echo "\e[96m         SCRIPT GOJEK 19 JULI 2020       \n";
 echo "\e[96m  ===================================== \n";
 echo "\e[93m         \e[96m AUTO CLAIM VOCHER 20K \e[93m \n";
 echo "\e[96m  =====================================\n";
@@ -39,9 +39,9 @@ echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
-        echo color("green"," [=]Otp Sudah Dikirim Nie")."\n";
+        echo color("green"," [=]Otp Sudah Dikirim")."\n";
         otp:
-        echo color("yellow","[+]OTPNYABRO : ");
+        echo color("yellow","[+]OTP : ");
         $otp = trim(fgets(STDIN));
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
@@ -52,8 +52,8 @@ echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo color("white","+] Your access token : ".$token."\n\n");
         save("token.txt",$token); 
         echo color("yellow","\n============UPDATE 17 JULI===========");
-        echo "\n".color("green","[Food] VOC DUA PULUH RIBU");
-        echo "\n".color("yellow"," SabarYa");
+        echo "\n".color("green","[Food] VOUCHER 20K");
+        echo "\n".color("yellow"," please wait...");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(35);
@@ -136,8 +136,8 @@ echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
-         echo color("red","[+] PIN GOPAY KAMU 192881 ")."\n";
-         $data2 = '{"pin":"192881"}';
+         echo color("red","[+] PIN GOPAY KAMU 121212 ")."\n";
+         $data2 = '{"pin":"121212"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          echo "OTP PASANG PIN: ";
          $otpsetpin = trim(fgets(STDIN));
