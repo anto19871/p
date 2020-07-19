@@ -46,7 +46,7 @@ echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
-        echo color("white"," [√]BERHASIL BRO\n");
+        echo color("white"," [√]GASS\n");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("white","+] Your access token : ".$token."\n\n");
@@ -157,9 +157,9 @@ echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
          goto otp;
          }
          }else{
-         echo color("yellow","[!]NOMOR SALAH ATAU GAK FRESH INGET WAJIB FRESH!");
+         echo color("yellow","[!]NOMOR SALAH ATAU UDAH TERDAFTAR!");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
-         echo color("green"," [×] PASTIKAN SUDAH MENGGUNAKAN FAKE GPS\n");
+         echo color("green"," [×] PASTIKAN FAKE GPS ON\n");
          goto ulang;
          }
 //  }
