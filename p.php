@@ -3,13 +3,13 @@ date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 ulang:
 // function change(){
-echo "\e[96m<=============SEKTOR VI =========> \n";
-echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
-echo "\e[96m         SCRIPT GOJEK 19 JULI 2020       \n";
-echo "\e[96m  ===================================== \n";
-echo "\e[93m         \e[96m AUTO CLAIM VOCHER 20K \e[93m \n";
-echo "\e[96m  =====================================\n";
-echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
+echo	 "\e[96m<=============SEKTOR VI =========> \n";
+echo	 "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
+echo	 "\e[96m         SCRIPT GOJEK 19 JULI 2020       \n";
+echo	 "\e[96m  ===================================== \n";
+echo	 "\e[93m         \e[96m AUTO CLAIM VOCHER 20K \e[93m \n";
+echo	 "\e[96m  =====================================\n";
+echo	 "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         echo color("yellow","[+] NOMOR: ");
@@ -52,7 +52,7 @@ echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo color("white","+] Your access token : ".$token."\n\n");
         save("token.txt",$token); 
         echo color("yellow","\n============UPDATE 17 JULI===========");
-        echo "\n".color("green","[Food] VOUCHER 20K");
+        echo "\n".color("yellow"," VOUCHER 20K");
         echo "\n".color("yellow"," please wait...");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
