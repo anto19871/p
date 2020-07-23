@@ -13,13 +13,13 @@ echo "\n".color("red","CLAIM VOUCHER: y/n ");
         echo color("green","=======>VOUCHER 15K<========");
         echo "\n".color("yellow","Please Wait");
         for($a=1;$a<=3;$a++){
-        echo color("white",".");
+        echo color("green",".");
         sleep(3);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Mantap bro')){
-        echo "\n".color("green"," Message: ".$message);
+        echo "\n".color("white"," Message: ".$message);
         }else{
         echo "\n".color("white"," Message: ".$message);
         sleep(1);
@@ -46,11 +46,11 @@ echo "\n".color("red","CLAIM VOUCHER: y/n ");
         echo "\n".color("yellow"," 3. ".$voucher3);
         echo "\n".color("yellow"," 4. ".$voucher4);
         echo "\n".color("yellow"," 5. ".$voucher5);
-        echo "\n".color("green"," 6. ".$voucher6);
-        echo "\n".color("green"," 7. ".$voucher7);
-        echo "\n".color("green"," 8. ".$voucher8);
-        echo "\n".color("green"," 9. ".$voucher9);
-        echo "\n".color("green"," 10. ".$voucher10);
+        echo "\n".color("yellow"," 6. ".$voucher6);
+        echo "\n".color("yellow"," 7. ".$voucher7);
+        echo "\n".color("yellow"," 8. ".$voucher8);
+        echo "\n".color("yellow"," 9. ".$voucher9);
+        echo "\n".color("yellow"," 10. ".$voucher10);
         $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
         $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
         $expired3 = getStr1('"expiry_date":"','"',$cekvoucher,'3');
