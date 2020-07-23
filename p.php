@@ -64,7 +64,7 @@ echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo "\n".color("green","🔓Message: ".$message);
         goto gocar;
         }else{
-        echo "\n".color("white"," 🔓Message: ".$message);
+        echo "\n".color("green"," 🔓Message: ".$message);
 	gocar:
         echo "\n".color("white","NUL ");
         echo "\n".color("white"," Skipp");
@@ -72,7 +72,7 @@ echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo color("green",".");
         sleep(0);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2107"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, '🔓Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","🔓Message: ".$message);
@@ -86,7 +86,7 @@ echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo color("green",".");
         sleep(0);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2107"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
         echo "\n".color("green"," Message: ".$message);
         sleep(2);
