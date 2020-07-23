@@ -1,16 +1,16 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function15.php";
-echo "\e[95m==================================================\n";
-echo
- "\e[93m            \e[96mVOUCHER LIMA BELAS RIBU \e[93m \n";
-echo "\e[96m  ================================================\n";
+echo   "\e[95m==================================================\n";
+echo   "\e[93m            \e[96m AUTO CLAIM 15K \e[93m \n";
+echo   "\e[96m	                @bimo_nugraha				 \n";
+echo   "\e[96m  ================================================\n";
 echo color("yellow","Masukin Tokennya : ");
 $token = trim(fgets(STDIN));
 echo "\n".color("red","CLAIM VOUCHER: y/n ");
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
-        echo color("green","=======>slow but sure<========");
+        echo color("green","=======>VOUCHER 15K<========");
         echo "\n".color("yellow","Please Wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
