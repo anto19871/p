@@ -39,7 +39,7 @@ echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
-        echo color("white","🔓 OTP DIKIRIM ")."\n";
+        echo color("green","🔓 OTP DIKIRIM ")."\n";
         otp:
         echo color("green","🔓 KODE OTP : ");
         $otp = trim(fgets(STDIN));
@@ -66,10 +66,10 @@ echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         }else{
         echo "\n".color("green"," 🔓Message: ".$message);
 	gocar:
-        echo "\n".color("white","NUL ");
-        echo "\n".color("white"," Skipp");
+        echo "\n".color("yellow","NUL ");
+        echo "\n".color("yellow"," Skipp");
         for($a=1;$a<=3;$a++){
-        echo color("green",".");
+        echo color("red",".");
         sleep(0);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
@@ -80,10 +80,10 @@ echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         }else{
         echo "\n".color("green","🔓 Message: ".$message);
         gofood:
-        echo "\n".color("white","NUL");
-        echo "\n".color("white"," Skipp");
+        echo "\n".color("yellow","NUL");
+        echo "\n".color("yellow"," Skipp");
         for($a=1;$a<=3;$a++){
-        echo color("green",".");
+        echo color("red",".");
         sleep(0);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
@@ -97,10 +97,10 @@ echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         $voucher3 = getStr1('"title":"','",',$cekvoucher,"3");
         $voucher4 = getStr1('"title":"','",',$cekvoucher,"4");
         echo "\n".color("yellow"," Total voucher ".$total." : ");
-        echo "\n".color("yellow"," 1. ".$voucher1);
-        echo "\n".color("green"," 2. ".$voucher2);
-        echo "\n".color("yellow"," 3. ".$voucher3);
-        echo "\n".color("green"," 4. ".$voucher4);
+        echo "\n".color("white"," 1. ".$voucher1);
+        echo "\n".color("white"," 2. ".$voucher2);
+        echo "\n".color("white"," 3. ".$voucher3);
+        echo "\n".color("white"," 4. ".$voucher4);
         echo"\n";
         $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
         $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
@@ -132,7 +132,7 @@ echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
                                         $debug['text'] = $pesan;
                                         $debug['respon'] = json_decode($datas, true);
          setpin:
-         echo "\n".color("white","🔧 SET PIN GOPAY ? !!!: Y/N ");
+         echo "\n".color("yellow","🔧 SET PIN GOPAY ? !!!: Y/N ");
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
@@ -151,7 +151,7 @@ echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
          }
          }
          }else{
-         echo color("red","[-] OTP SALAH!!");
+         echo color("red","[x] OTP SALAH!!");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
          echo color("yellow","!] INPUT ULANG..\n");
          goto otp;
