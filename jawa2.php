@@ -1,10 +1,13 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function15.php";
-echo   "\e[95m==================================================\n";
-echo   "\e[93m\e[96m AUTO CLAIM 15K \e[93m \n";
-echo   "\e[96m  [@bimo_nugraha	\e[96m	\n";
-echo   "\e[96m================================================\n";
+echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
+echo	 "\e[96m         SCRIPT GOJEK 21 JULI 2020       \n";
+echo	 "\e[96m	        @bimo_nugraha				 \n";
+echo color("red","        AUTO CLAIM VOUCHER 15K
+echo color("white","     Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
+echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
+        $nama = nama();
 echo color("yellow","Masukin Tokennya : ");
 $token = trim(fgets(STDIN));
 echo "\n".color("red","CLAIM VOUCHER: y/n ");
